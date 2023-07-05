@@ -1,4 +1,4 @@
 package exceptions;
 
-public class BankOnlineException extends Throwable {
+public class BankOnlineException extends Exception {
 }

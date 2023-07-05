@@ -1,5 +1,5 @@
 package oop;
-public class Square extends Figure implements Drawable{
+public class Square extends Figure {
     double size;
     public double area() { return size*size; }
     public double perimeter() { return 4*size; }

@@ -1,13 +1,8 @@
 package oop;
 public class Book {
-    String title;
-    Author author;
-    int year;
-    Book(String title, Author author, int year){
-        this.title = title;
-        this.author = author;
-        this.year = year;
-    }
+    private String title;
+    private Author author;
+    private int year;
 
     public String getTitle() {
         return title;
@@ -37,9 +32,15 @@ public class Book {
     public String toString() {
         return String.format("название: %s, автор: %s, год: %d.", title, author.getName(), year);
     }
+
+    Book(String title, Author author, int year){
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
 }
 class Author {
-    String name, sex, email;
+    private String name, sex, email;
     Author(String name, String sex, String email){
         this.name = name;
         this.sex = sex;

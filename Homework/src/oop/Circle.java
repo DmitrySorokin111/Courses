@@ -13,8 +13,7 @@ public class Circle {
         return 2*Math.PI*radius;
     }
     public String toString(){
-        System.out.printf("радиус: %f, цвет: %s, площадь: %f, периметр: %f.%n",
-                           this.radius, this.color, this.area(), this.perimeter());
-        return null;
+        return String.format("радиус: %f, цвет: %s, площадь: %f, периметр: %f.%n",
+                              this.radius, this.color, this.area(), this.perimeter());
     }
 }

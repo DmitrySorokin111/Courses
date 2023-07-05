@@ -1,5 +1,5 @@
 package oop;
-public class Circle1 extends Figure implements Drawable {
+public class Circle1 extends Figure {
     double radius;
     public double area() { return Math.PI*radius*radius; }
     public double perimeter(){

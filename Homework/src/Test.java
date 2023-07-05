@@ -1,5 +1,11 @@
+import lambda.Animal;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 //        oop.Test.test1();
 //        oop.Test.test2();
 //        oop.Test.test3();
@@ -12,6 +18,25 @@ public class Test {
 //        exceptions.Test.test2("1111111111111111");
 //        exceptions.Test.test3(-124.3);
 //        exceptions.Test.test4(50001.1);
-        exceptions.Test.test5(null, 50001.1);
+//        exceptions.Test.test5(null, 50001.1);
+
+//        annotation.TestAnnotations.test1();
+//        annotation.TestAnnotations.test2();
+//        annotation.TestAnnotations.test3();
+//        annotation.TestAnnotations.test4();
+//        annotation.TestAnnotations.test5();
+//        annotation.TestAnnotations.test6();
+
+//        lambda.TestLambdas.test1();
+//        lambda.TestLambdas.test2();
+//        lambda.TestLambdas.test3();
+//        lambda.TestLambdas.test4();
+
+//        streams.TestStreams.test1();
+//        streams.TestStreams.test2();
+        streams.TestStreams.test3();
+//        streams.TestStreams.test4();
+
+
     }
 }

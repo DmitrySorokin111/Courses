@@ -1,5 +1,5 @@
 package oop;
-public class Triangle extends Figure implements Drawable {
+public class Triangle extends Figure {
     double a, b, c;
     public double perimeter() { return a + b + c; }
     public double area() {

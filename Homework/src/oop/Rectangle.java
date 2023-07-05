@@ -1,5 +1,5 @@
 package oop;
-public class Rectangle extends Figure implements Drawable {
+public class Rectangle extends Figure {
     double width;
     double height;
     public double area() { return width*height; }

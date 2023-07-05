@@ -1,5 +1,5 @@
 package oop;
-public interface Drawable {
+interface Drawable {
     public void draw();
     public void draw(Color color);
 }
