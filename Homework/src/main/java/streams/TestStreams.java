@@ -6,13 +6,8 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class TestStreams {
-    public static void test1() {
+    public static Double test1(List<Integer> list) {
         //Task 1
-
-        List<Integer> list = new ArrayList<>();
-        for(int i = 0; i < 10; ++i)
-            list.add(Math.abs(new Random().nextInt()%20));
-        System.out.println(list);
 
         double avg = list.stream()
                 .mapToInt(x -> x)
@@ -21,11 +16,11 @@ public class TestStreams {
                 .average()
                 .orElse(0);
 
-        System.out.println(avg);
+        return avg;
     }
 
-    public static void test2() {
-        //Task 2
+    public static int test2() {
+        //Task 3
 
         Stream<String> stringStream = Stream.of("Alpha", "Bravo", "Charlie");
 
@@ -42,15 +37,11 @@ public class TestStreams {
                 ));
 
         countToNameMap.forEach((count, name) -> System.out.println(count + ": " + name));
+        return countToNameMap.size();
     }
 
-    public static void test3() {
-        //Task 3
-
-        Map<String, List<Integer>> strListMap = new HashMap<>();
-        strListMap.put("A", Arrays.asList(1, 2, 3));
-        strListMap.put("B", Arrays.asList(4, 5, 6));
-        strListMap.put("C", Arrays.asList(7, 8, 9));
+    public static long test3(Map<String, List<Integer>> strListMap) {
+        //Task 4
 
         Stream<StreamContainer> streamContainer = strListMap
                 .entrySet()
@@ -63,18 +54,18 @@ public class TestStreams {
         List<StreamContainer> containerList = streamContainer.toList();
 
         long count = containerList.size();
-        System.out.println("Количество элементов: " + count);
+//        System.out.println("Количество элементов: " + count);
+        return count;
     }
 
-    public static void test4() {
+    public static boolean test4(String str) {
         //Task 5
 
-        String binaryString = "1010101010";
-
-        Stream<Boolean> booleanStream = binaryString.chars().mapToObj(ch -> ch == '1');
+        Stream<Boolean> booleanStream = str.chars().mapToObj(ch -> ch == '1');
 
         boolean result = booleanStream.reduce(true, (a, b) -> a && b);
 
-        System.out.println("Результат: " + result);
+//        System.out.println("Результат: " + result);
+        return result;
     }
 }

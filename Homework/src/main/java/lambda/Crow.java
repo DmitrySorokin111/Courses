@@ -1,6 +1,6 @@
 package lambda;
 
-public class Clazz {
+public class Crow {
 
     public static void sound() {
         System.out.println("Caw");

@@ -11,12 +11,3 @@ public @interface InheritantAnnotation {
     int dayOfWeek() default 0;
 }
 
-@InheritantAnnotation(dayOfWeek = 1)
-class Parent {
-
-}
-
-class Child extends Parent {
-
-}
-

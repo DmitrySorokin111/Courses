@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-class DataContainer {
+public class DataContainer {
     private int intValue;
     private String strValue;
     private char charValue;

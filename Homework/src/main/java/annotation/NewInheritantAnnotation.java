@@ -24,17 +24,3 @@ public @interface NewInheritantAnnotation {
     String value() default "Base";
 }
 
-@NewInheritantAnnotation("Base Class")
-class BaseClass {
-    @NewRepeatableAnnotation(value = 1)
-    @NewRepeatableAnnotation(value = 2)
-    public void baseMethod(DataContainer container) { }
-}
-
-@NewInheritantAnnotation("Child Class")
-class ChildClass extends BaseClass {
-    @Override
-    @NewRepeatableAnnotation(value = 3)
-    @NewRepeatableAnnotation(value = 4)
-    public void baseMethod(DataContainer container) { }
-}
