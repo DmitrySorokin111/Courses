@@ -2,6 +2,6 @@ package lambda;
 /*
 Task 1
 */
-interface Sounding {
-    public void sound();
+public interface Sounding {
+    void sound();
 }
