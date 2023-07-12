@@ -22,11 +22,10 @@ class MultithreadingTest {
     void test2() {
         //Task 7
 
-        int increasersCount = 3;
-        Resource resource = new Resource(106);
+        Resource resource = new Resource(0); // 1 < val <= 5
 
-        int expected = resource.field + (increasersCount - 1) * 100;
-        int actual = TestMultithreading.test2(resource, increasersCount);
+        int expected = resource.field;
+        int actual = TestMultithreading.test2(resource);
 
         assertEquals(expected, actual);
     }

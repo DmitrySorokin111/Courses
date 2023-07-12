@@ -38,33 +38,26 @@ public class TestMultithreading
         return resource.field;
     }
 
-    public static int test2(Resource resource, int incsCount) {
+    public static int test2(Resource resource) {
         //Task 7
 
-        Increaser1[] increasers = new Increaser1[5];
-
-        for (int i = 0; i < incsCount; ++i) {
-            increasers[i] = new Increaser1(resource);
-            increasers[i].start();
-        }
+        Increaser1 inc = new Increaser1(resource);
 
         Decreaser decreaser1 = new Decreaser(resource);
         Thread dec = new Thread(decreaser1);
 
+        inc.start();
         dec.start();
 
         try {
-            for (int i = 0; i < incsCount; ++i) {
-                increasers[i].join();
-            }
+            inc.join();
             dec.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        System.out.println(resource.field);     //при равном кол-ве increaser`ов и decreaser`ов
-                                                //вернёт то же число, что и было, иначе программа
-                                                //не завершится из-за условий задачи.
+        System.out.println(resource.field);
+
         return resource.field;
     }
 }

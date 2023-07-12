@@ -16,19 +16,7 @@ public class Increaser1 extends Thread {
 
         synchronized (resource) {
             try {
-                for (int i = 0; i < 100; ++i) {
-
-                    while (resource.field == 5) {
-                        try {
-                            resource.wait();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                    RESOURCE_PROCESSOR.increase(resource);
-//                    System.out.println(resource.field);
-                    resource.notifyAll();
-                }
+                RESOURCE_PROCESSOR.increase(resource);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
