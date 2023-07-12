@@ -1,4 +1,4 @@
-package annotation;
+package _annotations_;
 /*
 Task 3
 */
@@ -12,5 +12,4 @@ import lombok.*;
 public class DataContainer {
     private int intValue;
     private String strValue;
-    private char charValue;
 }
